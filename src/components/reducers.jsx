@@ -5,7 +5,7 @@ export const initialState = {
   answers: [],
   skippedQuestions: [],
   timer: 1800,
-  totalMarks: 0, // Add the totalMarks field
+  totalMarks: 0,
 };
 
 // reducers.js
@@ -42,10 +42,10 @@ export const quizReducer = (state, action) => {
         ...state,
         timer: state.timer - 1,
       };
-      case "RETAKE_QUIZ":
-        return {
-          ...initialState, 
-        };
+    case "RETAKE_QUIZ":
+      return {
+        ...initialState,
+      };
     default:
       return state;
   }

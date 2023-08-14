@@ -17,7 +17,6 @@
 
 // export default QuitQuiz;
 
-
 import React, { useReducer } from "react";
 import Quiz from "./Quiz";
 
@@ -45,7 +44,7 @@ const QuitQuiz = () => {
   };
 
   if (state.retakeClicked) {
-        return <Quiz />;
+    return <Quiz />;
   }
 
   return (

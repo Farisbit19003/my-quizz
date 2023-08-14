@@ -3,7 +3,6 @@ import { FiChevronDown } from "react-icons/fi";
 import Retake from "./buttons/Retake";
 import ReactConfetti from "react-confetti";
 
-
 const Dropdown = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -87,10 +86,10 @@ const Results = ({
   return (
     <>
       <div className="p-2 m-2">
-      <ReactConfetti
+        <ReactConfetti
           width={window.innerWidth}
           height={window.innerHeight}
-          recycle={false} 
+          recycle={false}
         />
         <h2 className="flex justify-center items-center text-lg text-green-300 md:text-3xl">
           Quiz Results

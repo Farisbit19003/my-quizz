@@ -76,9 +76,7 @@ const Quiz = () => {
 
   return (
     <>
-     {showModal && (
-        <Modal onClose={() => setShowModal(false)} />
-      )}
+      {showModal && <Modal onClose={() => setShowModal(false)} />}
       <div className="flex flex-col h-full">
         {quizQuitted ? (
           <QuitQuiz onRetakeClick={handleRetakeQuiz} />
