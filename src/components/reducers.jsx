@@ -4,7 +4,7 @@ export const initialState = {
   currentQuestionIndex: 0,
   answers: [],
   skippedQuestions: [],
-  timer: 1800,
+  timer: 20,
   totalMarks: 0,
 };
 
@@ -41,6 +41,11 @@ export const quizReducer = (state, action) => {
       return {
         ...state,
         timer: state.timer - 1,
+      };
+      case "TIMER_END":
+      return {
+        ...state,
+        currentQuestionIndex: questions.length,
       };
     case "RETAKE_QUIZ":
       return {

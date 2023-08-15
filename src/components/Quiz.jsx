@@ -28,11 +28,17 @@ const Quiz = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      dispatch({ type: "TICK" });
+      if (state.timer > 0) {
+        dispatch({ type: "TICK" });
+      } else {
+        dispatch({ type: "TIMER_END" }); 
+      }
     }, 1000);
 
+    
+
     return () => clearInterval(intervalId);
-  }, []);
+  }, [state.timer]);
 
   const handleSkip = () => {
     dispatch({
