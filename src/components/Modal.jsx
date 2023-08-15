@@ -13,6 +13,7 @@ const Modal = ({ onClose }) => {
           <li>If you don't know the answer, you can skip it.</li>
           <li>Skips are unanswerable.</li>
           <li>You can quit at any time.</li>
+          <li>If you click on any answer, it will automatically goes on to next.</li>
           <li>You can end the quiz at any time.</li>
           <li>There is no negative marking.</li>
         </ul>

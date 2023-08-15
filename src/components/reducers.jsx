@@ -4,7 +4,7 @@ export const initialState = {
   currentQuestionIndex: 0,
   answers: [],
   skippedQuestions: [],
-  timer: 2700,
+  timer: 2700, // FOR 45 MINS
   totalMarks: 0,
 };
 
@@ -12,6 +12,7 @@ export const initialState = {
 
 export const quizReducer = (state, action) => {
   switch (action.type) {
+    // MOVE TO NEXT QUESTION
     case "NEXT_QUESTION":
       const question = questions[action.payload.questionIndex];
       const isCorrect =
@@ -23,6 +24,7 @@ export const quizReducer = (state, action) => {
         answers: [...state.answers, { ...action.payload, marks }],
         totalMarks: state.totalMarks + marks, // Update totalMarks
       };
+      //SKIP QUESTION
     case "SKIP_QUESTION":
       return {
         ...state,
@@ -32,21 +34,25 @@ export const quizReducer = (state, action) => {
           action.payload.questionIndex,
         ],
       };
+      //END QUIZ
     case "END_QUIZ":
       return {
         ...state,
         currentQuestionIndex: questions.length,
       };
+      //TIMER STARTS
     case "TICK":
       return {
         ...state,
         timer: state.timer - 1,
       };
+      //TIMER ENDS
       case "TIMER_END":
       return {
         ...state,
         currentQuestionIndex: questions.length,
       };
+      //RETAKE QUIZ
     case "RETAKE_QUIZ":
       return {
         ...initialState,
