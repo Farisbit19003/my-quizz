@@ -3,7 +3,7 @@ import Quiz from '././components/Quiz';
 
 function App() {
   return (
-    <div className="App">
+    <div className=" h-screen">
       <Quiz />
     </div>
   );
