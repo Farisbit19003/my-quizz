@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useMemo, useReducer, useState } from "react";
 import questions from "./questions";
 import { initialState, quizReducer } from "./reducers";
 import Timer from "./Timer";
@@ -59,7 +59,11 @@ const Quiz = () => {
     dispatch({ type: "RETAKE_QUIZ" });
   };
 
-  const shuffledQuestions = questions.slice().sort(() => Math.random());
+  const shuffledQuestions = useMemo(() => {
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    return shuffled;
+  }, []);
+
   const currentQuestion = shuffledQuestions[currentQuestionIndex];
 
   const wrongAnswers = [];

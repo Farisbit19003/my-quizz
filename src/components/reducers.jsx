@@ -4,7 +4,7 @@ export const initialState = {
   currentQuestionIndex: 0,
   answers: [],
   skippedQuestions: [],
-  timer: 20,
+  timer: 2700,
   totalMarks: 0,
 };
 

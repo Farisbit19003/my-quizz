@@ -1,5 +1,16 @@
 const questions = [
   {
+    question: "How can you add third-party plugins to Tailwind CSS?",
+    options: [
+      "By modifying the core source code",
+      "By including external JavaScript files",
+      "By installing them via npm and configuring your Tailwind CSS configuration file",
+      "By using inline styles within your HTML",
+    ],
+    correctAnswer:
+      "By installing them via npm and configuring your Tailwind CSS configuration file",
+  },
+  {
     question: "What does JSX stand for in React?",
     options: ["JavaScript XML", "Java XML", "JSON XML", "Java Syntax XML"],
     correctAnswer: "JavaScript XML",
@@ -188,6 +199,73 @@ const questions = [
     question: "Which Node.js module is commonly used for creating web servers?",
     options: ["fs", "http", "path", "url"],
     correctAnswer: "http",
+  },
+  {
+    question: "What is Tailwind CSS?",
+    options: [
+      "A JavaScript framework",
+      "A CSS preprocessor",
+      "A utility-first CSS framework",
+      "A responsive design library",
+    ],
+    correctAnswer: "A utility-first CSS framework",
+  },
+  {
+    question: "Which CSS properties does Tailwind CSS primarily focus on?",
+    options: [
+      "Typography and color",
+      "Animations and transitions",
+      "Layout and positioning",
+      "Media queries and responsive design",
+    ],
+    correctAnswer: "Layout and positioning",
+  },
+  {
+    question: "How does Tailwind CSS allow customization of styles?",
+    options: [
+      "By providing a built-in theme editor",
+      "By using a visual drag-and-drop interface",
+      "By generating random styles",
+      "By using configuration files and utility classes",
+    ],
+    correctAnswer: "By using configuration files and utility classes",
+  },
+  {
+    question: "What is the purpose of utility classes in Tailwind CSS?",
+    options: [
+      "To define custom JavaScript functions",
+      "To create complex animations",
+      "To apply predefined styles using class names",
+      "To generate responsive images",
+    ],
+    correctAnswer: "To apply predefined styles using class names",
+  },
+  {
+    question: "What is the purpose of the 'map' function in JavaScript?",
+    options: [
+      "To create a new array with modified elements based on the original array",
+      "To sort the elements of an array in ascending order",
+      "To filter out elements from an array that meet a certain condition",
+      "To concatenate two or more arrays together",
+    ],
+    correctAnswer:
+      "To create a new array with modified elements based on the original array",
+  },
+  {
+    question: "Which class naming convention does Tailwind CSS follow?",
+    options: [
+      "BEM (Block Element Modifier)",
+      "CamelCase",
+      "Hungarian notation",
+      "Human-readable descriptive classes",
+    ],
+    correctAnswer: "Human-readable descriptive classes",
+  },
+  {
+    question:
+      "Which Tailwind CSS class is used to make an element take up the available space within a flex container?",
+    options: ["flex-grow", "flex-shrink", "flex-fill", "flex-basis"],
+    correctAnswer: "flex-grow",
   },
 ];
 
